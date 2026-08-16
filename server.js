@@ -1,15 +1,11 @@
-const express = require("express");
+import express from "express";
 
 const app = express();
 
-app.use(express.static(__dirname));
 app.get("/api/mensagem", (req, res) => {
   res.json({
-    mensagem: "Olá! Essa mensagem veio do Node.js."
+    mensagem: "Olá! Essa mensagem veio do Node.js no Cloudflare."
   });
 });
-const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
-});
+export default app;
