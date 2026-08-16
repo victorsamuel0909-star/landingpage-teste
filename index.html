@@ -120,7 +120,7 @@
 
     </footer>
     <script>
-  fetch("/api/mensagem")
+ fetch("https://landingpage-teste.somosaramart.workers.dev/api/mensagem")
     .then(resposta => resposta.json())
     .then(dados => {
       document.getElementById("mensagem-api").textContent = dados.mensagem;
