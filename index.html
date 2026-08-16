@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NovaTech</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+
+    <p id="mensagem-api">Carregando mensagem...</p>
+
+    <header class="header">
+
+        <div class="logo">
+            NovaTech
+        </div>
+
+        <nav class="menu">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-conteudo">
+
+                <h1>Transformamos ideias em soluções digitais</h1>
+
+                <p>
+                    Criamos experiências modernas, simples e eficientes
+                    para ajudar negócios a crescerem no mundo digital.
+                </p>
+
+                <a href="#contato" class="botao">
+                    Fale conosco
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <section class="sobre" id="sobre">
+
+            <h2>Sobre nós</h2>
+
+            <p>
+                Somos uma empresa focada em tecnologia e desenvolvimento
+                de soluções digitais para empresas e profissionais.
+            </p>
+
+        </section>
+
+
+        <section class="servicos" id="servicos">
+
+            <h2>Nossos serviços</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Sites</h3>
+                    <p>
+                        Desenvolvimento de sites modernos e responsivos.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Landing Pages</h3>
+                    <p>
+                        Páginas focadas em apresentar produtos e gerar contatos.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Design</h3>
+                    <p>
+                        Interfaces simples, bonitas e fáceis de utilizar.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="contato" id="contato">
+
+            <h2>Vamos conversar?</h2>
+
+            <p>
+                Entre em contato e descubra como podemos ajudar seu projeto.
+            </p>
+
+            <a href="#" class="botao">
+                Entrar em contato
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <p>© 2026 NovaTech. Todos os direitos reservados.</p>
+
+    </footer>
+    <script>
+  fetch("/api/mensagem")
+    .then(resposta => resposta.json())
+    .then(dados => {
+      document.getElementById("mensagem-api").textContent = dados.mensagem;
+    });
+</script>
+</body>
+
+</html>
